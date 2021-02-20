@@ -1,0 +1,10 @@
+.wrapper {
+  @apply flex flex-row items-stretch min-w-full;
+  & .main {
+    @apply flex flex-col;
+    min-width: calc(100% - (0.25rem * 64));
+  }
+}
+#__layout {
+  @apply w-full h-full min-h-full min-w-full p-0 m-0 relative overflow-x-hidden;
+}

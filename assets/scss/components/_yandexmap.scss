@@ -1,0 +1,7 @@
+#map {
+  & > div {
+    & > ymaps {
+      @apply rounded-lg overflow-hidden relative;
+    }
+  }
+}

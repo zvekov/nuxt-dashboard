@@ -1,0 +1,276 @@
+aside {
+  &.aside {
+    @apply w-full fixed top-0 left-0 flex flex-col h-full min-h-screen px-0 z-50 border-r bg-white;
+    min-width: calc(0.25rem * 16);
+    max-width: 15rem;
+    & .aside-tools {
+      @apply flex justify-start items-center p-4;
+      min-height: 2rem;
+      & .logo {
+        @apply w-8 h-8;
+      }
+      & span {
+        @apply overflow-hidden whitespace-no-wrap;
+      }
+    }
+    & .menu-list {
+      & a {
+        @apply w-full flex flex-row items-center relative h-10 justify-start overflow-hidden whitespace-no-wrap;
+      }
+      & > li {
+        &.is-active > a > .arrow {
+          @apply rotate-90;
+        }
+        & > a {
+          @apply cursor-pointer;
+        }
+        & ul {
+          @apply hidden m-0;
+          & > li {
+            & > a {
+              @apply pl-16;
+            }
+          }
+        }
+      }
+    }
+    & .menu-label {
+      @apply w-full flex flex-row items-center justify-start font-light h-16 text-xs leading-4 px-4 relative uppercase;
+      &:before {
+        @apply bg-gray-300 opacity-0 w-full left-0 right-0 absolute;
+        transition: opacity 0.2s ease-in-out;
+        content: '';
+        z-index: 1;
+        top: calc((0.25rem * 8) - 2px);
+        height: 1px;
+      }
+    }
+    & .menu-item-label {
+      @apply w-full flex flex-row items-center relative h-10 justify-start overflow-hidden whitespace-no-wrap cursor-pointer;
+      text-overflow: ellipsis;
+      min-width: calc(0.25rem * 16);
+      max-width: calc(0.25rem * 64);
+      &:hover,
+      &.is-active {
+        @apply text-green-600;
+        &:after {
+          @apply absolute top-0 bottom-0 left-0 w-1 bg-green-600 bg-opacity-100;
+          content: '';
+        }
+      }
+      & .arrow {
+        @apply transform -rotate-90 transition-transform duration-150;
+      }
+    }
+  }
+}
+
+html {
+  &.has-aside-mobile-transition {
+    & aside {
+      &.aside {
+        & .menu-list {
+          & li {
+            &.is-active {
+              & ul {
+                @apply block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.has-aside-mobile-expanded {
+    & body {
+      @apply overflow-y-hidden;
+    }
+  }
+  &.aside-compact {
+    & body {
+      @screen lg {
+        padding-left: calc(0.25rem * 16) !important;
+      }
+    }
+    & .menu-list li ul > li > a {
+      @apply px-8;
+    }
+    aside.aside {
+      max-width: calc(0.25rem * 16);
+      & .logo-block {
+        a {
+          span {
+            @screen lg {
+              @apply hidden;
+            }
+          }
+        }
+      }
+      & .menu-label {
+        @screen lg {
+          span {
+            @apply hidden;
+          }
+        }
+        &:before {
+          @apply opacity-100;
+        }
+      }
+      & .menu-list li {
+        @apply relative;
+        &.is-active ul {
+          @apply absolute left-0 top-0 z-50 mt-0 bg-white shadow-xs ml-16;
+        }
+      }
+    }
+  }
+}
+aside.aside.is-expanded .menu-list li.is-active ul > li > ul {
+  @apply hidden;
+}
+aside.aside.is-expanded .menu-list li.is-active > ul > li.is-active {
+  & > a {
+    @apply text-green-600;
+    &:after {
+      @apply absolute top-0 bottom-0 left-0 w-1 bg-green-600 bg-opacity-100;
+      content: '';
+    }
+    & .arrow {
+      @apply rotate-90;
+    }
+  }
+  & > ul {
+    @apply block;
+    & li > a {
+      @apply pl-20;
+    }
+  }
+}
+aside.aside.is-expanded
+  .menu-list
+  li.is-active
+  ul
+  > li.is-active
+  ul
+  > li.is-active {
+  & > .arrow {
+    @apply rotate-90;
+  }
+  & > a {
+    @apply text-green-600;
+    &:after {
+      @apply absolute top-0 bottom-0 left-0 w-1 bg-green-600 bg-opacity-100;
+      content: '';
+    }
+  }
+  & > ul {
+    @apply block;
+    & li > a {
+      @apply pl-24;
+    }
+  }
+}
+aside.aside.is-expanded
+  .menu-list
+  li.is-active
+  ul
+  > li.is-active
+  ul
+  > li.is-active
+  ul
+  > li.is-active {
+  & > .arrow {
+    @apply rotate-90;
+  }
+  & > a {
+    @apply text-green-600;
+    &:after {
+      @apply absolute top-0 bottom-0 left-0 w-1 bg-green-600 bg-opacity-100;
+      content: '';
+    }
+  }
+  & > ul {
+    @apply block;
+    & li > a {
+      @apply pl-24;
+      & span {
+        @apply pl-2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  html.has-aside-mobile-transition body {
+    overflow-x: hidden;
+  }
+  html.has-aside-mobile-transition #app,
+  html.has-aside-mobile-transition body,
+  html.has-aside-mobile-transition nav.navbar {
+    width: 100vw;
+  }
+  html.has-aside-mobile-transition aside.aside {
+    max-width: 100vw;
+    width: 15rem;
+    left: -15rem;
+  }
+  html.has-aside-mobile-transition aside.aside.is-placed-right {
+    left: auto;
+    right: -16.5rem;
+  }
+  html.has-aside-mobile-transition aside.aside .image img {
+    max-width: 4.95rem;
+  }
+  html.has-aside-mobile-transition aside.aside .menu-list a .icon {
+    width: 3rem;
+  }
+  html.has-aside-mobile-expanded #app,
+  html.has-aside-mobile-expanded nav.navbar {
+    margin-left: 15rem;
+  }
+  html.has-aside-mobile-expanded aside.aside.is-placed-left {
+    left: 0;
+  }
+  html.has-aside-mobile-expanded aside.aside.is-placed-left.is-secondary {
+    left: 1.5rem;
+    box-shadow: -10px 0 10px #242424;
+  }
+  html.has-aside-right {
+    overflow: hidden;
+  }
+  html.has-aside-right aside.aside.is-placed-right {
+    right: 0;
+  }
+  html.has-aside-right #app,
+  html.has-aside-right nav.navbar {
+    margin-left: -15rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html.has-aside-left.has-aside-expanded body,
+  html.has-aside-left.has-aside-expanded nav.navbar {
+    padding-left: 15rem;
+  }
+  html.has-aside-left.has-aside-expanded aside.aside.is-secondary {
+    left: 15rem;
+  }
+  html.has-aside-left body,
+  html.has-aside-left nav.navbar {
+    padding-left: 4.5rem;
+  }
+  aside.aside.is-expanded {
+    width: 15rem;
+  }
+  aside.aside.is-expanded .menu-list .icon {
+    width: 3rem;
+  }
+  aside.aside.is-expanded .menu-list .icon.has-update-mark:after {
+    right: 0.65rem;
+  }
+  aside.aside.is-expanded .menu-list span.menu-item-label {
+    display: inline-block;
+  }
+  aside.aside.is-expanded .menu-list li.is-active ul {
+    display: block;
+  }
+}

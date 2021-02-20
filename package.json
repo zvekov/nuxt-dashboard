@@ -1,0 +1,53 @@
+{
+  "name": "nuxt-dashboard",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Yury Zvekov <mail@zvekov.com>",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "tailwindcss",
+    "nuxt",
+    "dashboard"
+  ],
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "cross-env NODE_ENV=production nuxt-ts build --modern=server",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "lint-fix": "yarn lint:js --fix"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.1",
+    "@nuxtjs/axios": "^5.12.5",
+    "leaflet": "^1.7.1",
+    "nuxt": "^2.14.12",
+    "simplebar-vue": "^1.6.0",
+    "vue-yandex-maps": "^0.10.9",
+    "vue2-leaflet": "^2.6.0"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.12",
+    "@nuxt/typescript-build": "^2.0.4",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-config-typescript": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg": "^0.1.12",
+    "@nuxtjs/tailwindcss": "^3.4.2",
+    "@nuxtjs/vercel-builder": "^0.18.1",
+    "@vercel/node": "^1.9.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1"
+  }
+}

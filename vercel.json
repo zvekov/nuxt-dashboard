@@ -1,0 +1,28 @@
+{
+  "name": "dashboard-nuxt",
+  "scope": "zvekov",
+  "github": {
+    "enabled": true
+  },
+  "trailingSlash": true,
+  "version": 2,
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "serverFiles": [
+          "middleware/**",
+          "plugins/**",
+          "lib/**",
+          "package.json",
+          "static/**",
+          "models/**"
+        ],
+        "tscOptions": {
+          "sourceMap": false
+        }
+      }
+    }
+  ]
+}

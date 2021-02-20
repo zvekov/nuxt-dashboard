@@ -1,0 +1,7 @@
+@import 'leaflet/dist/leaflet.css';
+.vue2leaflet-map {
+  @apply rounded-lg border relative z-30;
+  & .leaflet-pane {
+    @apply rounded-lg overflow-hidden w-full h-full;
+  }
+}
