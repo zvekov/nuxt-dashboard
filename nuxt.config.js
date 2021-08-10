@@ -46,22 +46,24 @@ export default {
     '@nuxt/typescript-build',
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  // axios: {},
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+      ],
+    },
     publicPath: '/assets/',
     extractCSS: true,
     // parallel: true,
     quiet: false,
-    analyze: false, // Анализ размеров пакетов в бандлах
+    analyze: false,
     splitChunks: {
       layouts: false,
       pages: true,

@@ -10,12 +10,12 @@ aside {
         @apply w-8 h-8;
       }
       & span {
-        @apply overflow-hidden whitespace-no-wrap;
+        @apply overflow-hidden whitespace-nowrap;
       }
     }
     & .menu-list {
       & a {
-        @apply w-full flex flex-row items-center relative h-10 justify-start overflow-hidden whitespace-no-wrap;
+        @apply w-full flex flex-row items-center relative h-10 justify-start overflow-hidden whitespace-nowrap;
       }
       & > li {
         &.is-active > a > .arrow {
@@ -46,7 +46,7 @@ aside {
       }
     }
     & .menu-item-label {
-      @apply w-full flex flex-row items-center relative h-10 justify-start overflow-hidden whitespace-no-wrap cursor-pointer;
+      @apply w-full flex flex-row items-center relative h-10 justify-start overflow-hidden whitespace-nowrap cursor-pointer;
       text-overflow: ellipsis;
       min-width: calc(0.25rem * 16);
       max-width: calc(0.25rem * 64);
@@ -119,7 +119,7 @@ html {
       & .menu-list li {
         @apply relative;
         &.is-active ul {
-          @apply absolute left-0 top-0 z-50 mt-0 bg-white shadow-xs ml-16;
+          @apply absolute left-0 top-0 z-50 mt-0 bg-white shadow ml-16;
         }
       }
     }

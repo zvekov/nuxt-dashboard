@@ -90,31 +90,6 @@ export default {
               { to: '/buttons', label: 'Buttons' },
             ],
           },
-          // {
-          //   label: 'Submenus',
-          //   icon: 'view-list',
-          //   menuSecondaryKey: 'submenu-1',
-          //   menuSecondaryIcon: 'view-list',
-          //   menuSecondaryLabel: 'Example',
-          //   menuSecondary: [
-          //     'Something',
-          //     [
-          //       { icon: 'view-list', to: '/', label: 'Sub-item One' },
-          //       { icon: 'view-list', to: '/', label: 'Sub-item Two' },
-          //     ],
-          //     'Dropdown',
-          //     [
-          //       {
-          //         label: 'Submenus',
-          //         icon: 'view-list',
-          //         menu: [
-          //           { to: '/', label: 'Sub-item One' },
-          //           { to: '/', label: 'Sub-item Two' },
-          //         ],
-          //       },
-          //     ],
-          //   ],
-          // },
         ],
         'Pages',
         [

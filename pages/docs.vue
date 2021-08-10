@@ -33,7 +33,7 @@
     </div>
   </div>
 </template>
-<style scoped>
+<style lang="postcss" scoped>
 p {
   @apply pb-2;
 }

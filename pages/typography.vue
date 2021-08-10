@@ -82,7 +82,7 @@
         </div>
       </div>
       <div>
-        <div>< ul >< / ul > List</div>
+        <div>&#60;ul&#62;&#60;/ul&#62; List</div>
         <ul class="list-disc list-inside py-2">
           <li>Item List 1</li>
           <li>Item List 1</li>
@@ -97,7 +97,7 @@
           >
         </div>
         <hr class="my-4" />
-        <div>< ol >< / ol > List</div>
+        <div>&#60;ol&#62;&#60;/ol&#62; List</div>
         <ul class="list-decimal list-inside py-2">
           <li>Item List 1</li>
           <li>Item List 1</li>

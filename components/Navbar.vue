@@ -1,9 +1,9 @@
 <template>
   <div class="navbar border-b fixed bg-white z-40">
     <div class="navbar-inner w-full flex items-center justify-start">
-      <ToogleMobileNav class="lg:hidden" />
-      <ToogleAsideCompact class="hidden lg:block" />
-      <SearchInput />
+      <navbar-toogle-mobile-nav class="lg:hidden" />
+      <navbar-toogle-aside-compact class="hidden lg:block" />
+      <navbar-search-input />
       <!-- <div class="relative">
         <button class="btn btn-default btn-icon bg-transparent h-16">
           <span class="mr-2">Explore</span
@@ -113,7 +113,6 @@
           </div>
         </div>
       </div> -->
-      <span class="ml-auto"></span>
       <!-- <div class="hidden lg:flex relative">
         <button class="flex items-center justify-center h-16 w-12">
           <span class="text-base flag-icon flag-icon-us"></span>
