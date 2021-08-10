@@ -21,4 +21,4 @@ $ yarn generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-### Demo: [dashboard-nuxt.vercel.app](https://nuxt-dashboard.vercel.app)
+### Demo: [nuxt-dashboard.vercel.app](https://nuxt-dashboard.vercel.app)
