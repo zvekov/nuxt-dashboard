@@ -1,0 +1,14 @@
+// Right to Left
+
+.right-left-leave-active,
+.right-left-enter-active {
+  transition: 0.15s;
+}
+.right-left-enter {
+  transform: translate(100%, 0);
+}
+.right-left-leave-to {
+  transform: translate(200%, 0);
+}
+
+// Right to Left

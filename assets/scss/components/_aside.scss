@@ -38,11 +38,14 @@ aside {
       @apply w-full flex flex-row items-center justify-start font-light h-16 text-xs leading-4 px-4 relative uppercase;
       &:before {
         @apply bg-gray-300 opacity-0 w-full left-0 right-0 absolute;
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.1s ease-in-out;
         content: '';
         z-index: 1;
         top: calc((0.25rem * 8) - 2px);
         height: 1px;
+      }
+      & > span {
+        transition: all 0.15s;
       }
     }
     & .menu-item-label {
@@ -113,7 +116,7 @@ html {
           }
         }
         &:before {
-          @apply opacity-100;
+          @apply opacity-50;
         }
       }
       & .menu-list li {
@@ -195,6 +198,12 @@ aside.aside.is-expanded
       @apply pl-24;
       & span {
         @apply pl-2;
+      }
+      & > li > a {
+        @apply pl-24;
+        & span {
+          @apply pl-2;
+        }
       }
     }
   }

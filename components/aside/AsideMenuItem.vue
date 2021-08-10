@@ -8,6 +8,7 @@
       :class="{ 'has-icon': !!item.icon, 'has-dropdown-icon': hasDropdown }"
       class="menu-item-label"
       @click="menuClick"
+      @mouseover="hover = true"
     >
       <span class="menu-item-icon" v-html="item.icon" />
       <span
@@ -22,6 +23,13 @@
       :menu="item.menu"
       :is-submenu-list="true"
     />
+    <!-- <div v-if="!toogleAsideCompact && hover" class="float-menu">
+          <AsideMenuList
+      v-if="hover"
+      :menu="item.menu"
+      :is-submenu-list="true"
+    />
+    </div> -->
   </li>
 </template>
 
@@ -40,6 +48,7 @@ export default {
   },
   data() {
     return {
+      hover: false,
       isDropdownActive: false,
     }
   },
@@ -73,6 +82,9 @@ export default {
 </script>
 
 <style lang="postcss">
+.float-menu {
+  @apply fixed -mt-10;
+}
 span.menu-item-icon > svg {
   width: calc(0.25rem * 16);
 }

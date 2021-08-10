@@ -6,7 +6,6 @@
       <div class="relative flex flex-row flex-auto">
         <div class="wrapper">
           <aside-menu id="aside" :menu="menu" />
-
           <div
             class="main w-full bg-gray-50 dark:bg-gray-900 text-gray-900 dark:bg-gray-900 dark:text-white"
           >
@@ -161,7 +160,14 @@ export default {
                         menu: [
                           { label: 'Level 4-1', to: '/miro' },
                           { label: 'Level 4-2', to: '/kanban' },
-                          { label: 'Level 4-3' },
+                          {
+                            label: 'Level 4-3',
+                            menu: [
+                              { label: 'Level 5-1', to: '/miro' },
+                              { label: 'Level 5-2', to: '/kanban' },
+                              { label: 'Level 5-3' },
+                            ],
+                          },
                         ],
                       },
                     ],

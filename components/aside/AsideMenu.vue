@@ -1,28 +1,33 @@
 <template>
-  <aside v-show="isAsideVisible" class="aside is-placed-left is-expanded">
-    <simplebar class="h-full overflow-x-hidden" data-simplebar-auto-hide="true">
-      <AsideTools :is-main-menu="true">
-        <span slot="label"> Nuxt Dashboard</span>
-      </AsideTools>
-      <div class="menu is-menu-main pb-8">
-        <template v-for="(menuGroup, index) in menu">
-          <p
-            v-if="typeof menuGroup === 'string'"
-            :key="index"
-            class="menu-label"
-          >
-            <span>{{ menuGroup }}</span>
-          </p>
-          <AsideMenuList
-            v-else
-            :key="index"
-            :menu="menuGroup"
-            @menu-click="menuClick"
-          />
-        </template>
-      </div>
-    </simplebar>
-  </aside>
+  <transition name="right-left">
+    <aside v-show="isAsideVisible" class="aside is-placed-left is-expanded">
+      <simplebar
+        class="h-full overflow-x-hidden"
+        data-simplebar-auto-hide="true"
+      >
+        <AsideTools :is-main-menu="true">
+          <span slot="label"> Nuxt Dashboard</span>
+        </AsideTools>
+        <div class="menu is-menu-main pb-8">
+          <template v-for="(menuGroup, index) in menu">
+            <p
+              v-if="typeof menuGroup === 'string'"
+              :key="index"
+              class="menu-label"
+            >
+              <span>{{ menuGroup }}</span>
+            </p>
+            <AsideMenuList
+              v-else
+              :key="index"
+              :menu="menuGroup"
+              @menu-click="menuClick"
+            />
+          </template>
+        </div>
+      </simplebar>
+    </aside>
+  </transition>
 </template>
 
 <script>
@@ -50,4 +55,8 @@ export default {
   },
 }
 </script>
-<style lang="postcss"></style>
+<style lang="postcss">
+aside {
+  @apply transform transition-all duration-150;
+}
+</style>
