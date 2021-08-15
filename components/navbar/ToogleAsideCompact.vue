@@ -1,5 +1,5 @@
 <template>
-  <button class="toogle-sidebar mx-4" @click.prevent="toogleCompact">
+  <button class="toogle-sidebar" @click.prevent="toogleCompact">
     <svg
       :class="toogleAsideCompact ? 'transform rotate-180' : ''"
       xmlns="http://www.w3.org/2000/svg"
