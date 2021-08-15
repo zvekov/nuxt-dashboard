@@ -5,7 +5,6 @@
     <svg
       :class="toogleAsideCompact ? 'transform rotate-180' : ''"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
       width="24px"
       height="24px"
       viewBox="0 0 24 24"
@@ -31,29 +30,24 @@
   </button>
 </template>
 <script>
-import { store, mutations } from '~/store/sidebar.js'
+import { store, mutations } from "~/store/sidebar.js";
 
 export default {
-  // data() {
-  //   return {
-  //     toogleAsideCompact: true,
-  //   }
-  // },
   computed: {
     toogleAsideCompact() {
-      return store.toogleAsideCompact
-    },
+      return store.toogleAsideCompact;
+    }
   },
   methods: {
     toogleCompact() {
-      mutations.toggleNav()
+      mutations.toggleNav();
       // const sidebar = document.getElementById('aside')
       store.toogleAsideCompact
-        ? document.documentElement.classList.add('aside-compact')
-        : document.documentElement.classList.remove('aside-compact')
-    },
-  },
-}
+        ? document.documentElement.classList.add("aside-compact")
+        : document.documentElement.classList.remove("aside-compact");
+    }
+  }
+};
 </script>
 
 <style lang="postcss" scoped>
