@@ -32,29 +32,30 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import AsideTools from '@/components/aside/AsideTools'
-import AsideMenuList from '@/components/aside/AsideMenuList'
-import simplebar from 'simplebar-vue'
+import { mapState } from "vuex";
+import AsideTools from "@/components/aside/AsideTools";
+import AsideMenuList from "@/components/aside/AsideMenuList";
+import simplebar from "simplebar-vue";
 
 export default {
-  name: 'AsideMenu',
+  name: "AsideMenu",
   components: { AsideTools, AsideMenuList, simplebar },
   props: {
     menu: {
       type: Array,
-      default: () => [],
-    },
+      default: () => []
+    }
   },
   computed: {
-    ...mapState(['isAsideVisible']),
+    ...mapState(["isAsideVisible"])
   },
   methods: {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     menuClick(item) {
       //
-    },
-  },
-}
+    }
+  }
+};
 </script>
 <style lang="postcss">
 aside {

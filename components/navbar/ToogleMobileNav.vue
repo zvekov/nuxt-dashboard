@@ -34,11 +34,7 @@
 <script>
 import { mapState } from "vuex";
 
-import BurgerIcon from "~/assets/svg/BurgerIcon.svg?inline";
-import CloseIcon from "~/assets/svg/CloseIcon.svg?inline";
-
 export default {
-  components: { BurgerIcon, CloseIcon },
   data() {
     return {
       isMenuNavBarActive: false
