@@ -60,6 +60,7 @@ export default {
               '<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" height="20px" viewBox="0 0 24 24">   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M5.5 11.5v-7a4 4 0 014-4h2a4 4 0 014 4v15a3 3 0 106 0v-2"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M10.5 18.5a5 5 0 01-10 0v-10a2 2 0 012-2h6a2 2 0 012 2v10z"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M.5 11.5h10"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M23.5 4.5v10h-4v-10h4v0z"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M19.5 4.5l2-4 2 4"/>   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M23.5 14.5h-4v1a2 2 0 104 0v-1z"/> </svg> ',
             menu: [
               { to: '/typography', label: 'Typography' },
+              { to: '/ui/inputs', label: 'Inputs' },
               { to: '/buttons', label: 'Buttons' },
               {
                 label: 'Icons',

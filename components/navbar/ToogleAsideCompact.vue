@@ -1,3 +1,5 @@
+<!--TODO-->
+<!--Save state to localStorage too-->
 <template>
   <button class="toogle-sidebar" @click.prevent="toogleCompact">
     <svg
