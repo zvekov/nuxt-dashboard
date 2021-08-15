@@ -3,7 +3,7 @@
     <div class="navbar-inner flex items-center justify-between p-3">
       <div class="grid grid-flow-col">
         <navbar-toogle-mobile-nav class="lg:hidden" />
-        <navbar-toogle-aside-compact class="hidden lg:block pl-1" />
+        <!--<navbar-toogle-aside-compact class="hidden lg:block pl-1" />-->
         <navbar-search-input class="px-3" />
       </div>
       <div class="grid grid-flow-col">

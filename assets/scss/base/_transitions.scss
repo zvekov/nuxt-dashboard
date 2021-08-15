@@ -1,3 +1,13 @@
+// Fade
+.fade-enter-active,
+.fade-leave-active {
+  @apply duration-75;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+// Fade
 // Right to Left
 
 .right-left-leave-active,
@@ -10,5 +20,4 @@
 .right-left-leave-to {
   transform: translate(200%, 0);
 }
-
 // Right to Left

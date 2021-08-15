@@ -1,3 +1,4 @@
+<!--TODO Dockable navigation for Aside Compact Mode-->
 <template>
   <transition name="right-left">
     <aside v-show="isAsideVisible" class="aside is-placed-left is-expanded">
