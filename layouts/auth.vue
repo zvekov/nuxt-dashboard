@@ -8,7 +8,7 @@
           <div
             class="main w-full bg-gray-50 dark:bg-gray-900 text-gray-900 dark:bg-gray-900 dark:text-white"
           >
-            <div class="w-full p-4 bg-gray-100 min-h-screen pt-20">
+            <div class="w-full p-4 bg-gray-100 min-h-screen flex items-center justify-center">
               <nuxt />
             </div>
           </div>
