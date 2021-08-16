@@ -19,6 +19,7 @@
           </div>
         </div>
       </div>
+      <atoms-copyright />
     </div>
   </simplebar>
 </template>
@@ -106,7 +107,7 @@ export default {
               { to: "/auth/signin", label: "Signin" },
               { to: "/auth/signup", label: "Signup" },
               { to: "/email-confirmation", label: "E-Mail Confirmation" },
-              { to: "/forgot-password", label: "Forgot Password" },
+              { to: "/auth/forgot", label: "Forgot Password" },
               { to: "/reset-password", label: "Reset Password" },
               { to: "/lock-screen", label: "Lock Screen" },
               { to: "/subscribe", label: "Subscribe" },
