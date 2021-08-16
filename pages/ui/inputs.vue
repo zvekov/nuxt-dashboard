@@ -5,7 +5,8 @@
     <div
       class="my-4 p-4 bg-white rounded-lg shadow-xs grid md:grid-cols-2 lg:grid-cols-4 gap-4"
     >
-      <ui-input-float :label="'Float Label'" :required="false" />
+      <ui-input-float :label="'Float Label'" :required="false" :type="'email'" />
+      <ui-input-outlined :label="'Outlined Label'" :required="true" />
     </div>
   </div>
 </template>

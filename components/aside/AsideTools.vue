@@ -14,7 +14,7 @@
         </transition>
         <navbar-toogle-aside-compact
           class="hidden lg:block"
-          :class="toogleAsideCompact ? 'px-1 h-8' : 'px-3'"
+          :class="toogleAsideCompact ? 'px-1 h-8' : 'pl-5'"
         />
       </div>
       <!-- <Logo />
@@ -24,23 +24,24 @@
 </template>
 
 <script>
-import { store } from '~/store/sidebar.js'
+import { store } from "~/store/sidebar.js";
+
 export default {
-  name: 'AsideTools',
+  name: "AsideTools",
   props: {
     icon: {
       type: String,
-      default: null,
+      default: null
     },
     label: {
       type: String,
-      default: null,
-    },
+      default: null
+    }
   },
   computed: {
     toogleAsideCompact() {
-      return store.toogleAsideCompact
-    },
-  },
-}
+      return store.toogleAsideCompact;
+    }
+  }
+};
 </script>

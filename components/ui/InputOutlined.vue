@@ -1,17 +1,13 @@
 <template>
-  <div class="input-float" :class="required ? 'required' : 'not-required'">
-    <input
-      :v-model="model"
-      :type="type"
-      :required="required"
-    />
+  <div class="input-outlined">
+    <input :v-model="model" :type="type" :required="required" />
     <label>{{ label }}</label>
   </div>
 </template>
 
 <script>
 export default {
-  name: "InputFloat",
+  name: "InputOutlined",
   props: {
     label: {
       type: String,
@@ -38,20 +34,25 @@ export default {
 };
 </script>
 
-<style scoped>
-.input-float {
+<style lang="postcss" scoped>
+.input-outlined {
   @apply relative;
 
   & input {
-    @apply border rounded-lg p-3 w-full;
+    @apply border rounded-lg p-3 w-full transition-transform duration-200 outline-none;
 
     &:focus {
-      @apply outline-none border-green-800;
+      @apply border-green-800;
+    }
+
+    &:focus {
+      @apply px-3 pt-4 pb-2;
     }
 
     &:focus ~ label {
-      @apply bg-white px-1 -ml-1 text-green-800;
-      top: -0.65rem;
+      @apply -ml-1 text-green-800;
+      top: 1px;
+      font-size: 0.5em;
     }
   }
 
