@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col max-w-md">
-    <div class="p-6 bg-white rounded-lg shadow-xs">
+  <div class="flex flex-col w-full md:max-w-md md:px-12">
+    <div class="py-6 px-8 bg-white rounded-lg shadow-xs">
       <h1>Signin</h1>
       <div v-show="error !== ''" class="p-3 border">
         <p>{{ error }}</p>
@@ -30,6 +30,8 @@
           >
             Login
           </button>
+          or
+          <nuxt-link to="/auth/signup">Sign Up</nuxt-link>
         </div>
       </form>
     </div>

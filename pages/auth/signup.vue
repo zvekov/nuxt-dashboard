@@ -1,12 +1,10 @@
 <template>
-  <div class="flex flex-col">
-    <div class="text-xs uppercase font-light text-gray-500">Authentication</div>
-    <h1>Signup</h1>
-    <div class="w-4/5 mx-auto md:w-1/2 text-center my-12">
+  <div class="flex flex-col w-full md:max-w-md md:px-12">
+    <div class="py-6 px-8 bg-white rounded-lg shadow-xs">
+      <h1>Signup</h1>
       <div v-show="error !== ''" class="p-3 border">
         <p>{{ error }}</p>
       </div>
-      <h1 class="font-bold text-2xl md:text-4xl mt-5">Signup</h1>
       <form @submit="createUser">
         <div>
           <input
@@ -40,6 +38,10 @@
           >
             Signup
           </button>
+          or
+          <nuxt-link to="/auth/signin">Sign
+            <In></In>
+          </nuxt-link>
         </div>
       </form>
     </div>
@@ -47,6 +49,7 @@
 </template>
 <script>
 export default {
+  layout: "auth",
   data() {
     return {
       email: "",
