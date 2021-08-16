@@ -9,7 +9,6 @@
         width="24px"
         height="24px"
         viewBox="0 0 24 24"
-        version="1.1"
       >
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <polygon points="0 0 24 0 24 24 0 24"></polygon>
@@ -61,7 +60,7 @@ export default {
 </script>
 <style lang="postcss">
 .close {
-  @apply h-full bg-white bg-opacity-30 flex p-4 right-0 top-0 fixed z-50;
+  @apply h-full bg-white bg-opacity-30 flex px-2 py-5 right-0 top-0 fixed z-50;
   width: calc(100% - 15rem);
   backdrop-filter: blur(0.25rem);
 }
