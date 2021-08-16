@@ -4,3 +4,8 @@
     <h1>Buttons</h1>
   </div>
 </template>
+<script>
+export default {
+  middleware: "authenticated"
+};
+</script>

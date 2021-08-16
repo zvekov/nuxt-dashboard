@@ -1,3 +1,5 @@
+const apiStrapi = process.env.API_STRAPI || 'http://localhost:1337'
+
 export default {
   head: {
     title: 'Nuxt Dashboard',
@@ -48,10 +50,22 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://strapi.nuxtjs.org/
+    '@nuxtjs/strapi',
   ],
 
-  // axios: {},
-
+  axios: {},
+  strapi: {
+    url: apiStrapi,
+    entities: [
+      { name: 'products', type: 'collection' },
+      { name: 'brands', type: 'collection' },
+      { name: 'categories', type: 'collection' },
+      { name: 'pages', type: 'collection' },
+      { name: 'settings', type: 'single' },
+    ],
+    key: 'userJwt',
+  },
   build: {
     babel: {
       plugins: [

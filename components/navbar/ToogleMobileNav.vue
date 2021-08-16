@@ -4,7 +4,7 @@
             :class="isAsideMobileExpanded ? 'close' : 'mx-1'"
             @click.prevent="menuToggleMobile">
       <svg
-        :class="!isAsideMobileExpanded ? 'transform rotate-180' : ''"
+        :class="!isAsideMobileExpanded ? 'transform rotate-180 duration-100' : ''"
         xmlns="http://www.w3.org/2000/svg"
         width="24px"
         height="24px"

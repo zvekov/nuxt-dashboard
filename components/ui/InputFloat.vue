@@ -1,9 +1,10 @@
 <template>
   <div class="input-float" :class="required ? 'required' : 'not-required'">
     <input
-      :v-model="model"
+      :value="value"
       :type="type"
       :required="required"
+      :placeholder="placeholder"
     />
     <label>{{ label }}</label>
   </div>
@@ -17,13 +18,17 @@ export default {
       type: String,
       default: null
     },
-    model: {
+    value: {
       type: String,
       default: null
     },
     type: {
       type: String,
       default: "text"
+    },
+    placeholder: {
+      type: String,
+      default: null
     },
     required: {
       type: Boolean,

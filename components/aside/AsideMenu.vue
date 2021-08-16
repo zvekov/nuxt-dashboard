@@ -1,9 +1,12 @@
 <!--TODO Dockable navigation for Aside Compact Mode-->
 <template>
   <transition name="right-left">
-    <aside v-show="isAsideVisible" class="aside is-placed-left is-expanded">
+    <aside @mouseleave="hover = false"
+           @mouseover="hover = true"
+           v-show="isAsideVisible" class="aside is-placed-left is-expanded">
       <simplebar
         class="h-full overflow-x-hidden"
+        :class="{ active: hover }"
         data-simplebar-auto-hide="true"
       >
         <AsideTools :is-main-menu="true">
@@ -39,13 +42,18 @@ import simplebar from "simplebar-vue";
 
 export default {
   name: "AsideMenu",
-  components: { AsideTools, AsideMenuList, simplebar },
   props: {
     menu: {
       type: Array,
       default: () => []
     }
   },
+  data() {
+    return {
+      hover: false
+    };
+  },
+  components: { AsideTools, AsideMenuList, simplebar },
   computed: {
     ...mapState(["isAsideVisible"])
   },

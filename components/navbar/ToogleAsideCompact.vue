@@ -3,7 +3,7 @@
 <template>
   <button class="toogle-sidebar" @click.prevent="toogleCompact">
     <svg
-      :class="toogleAsideCompact ? 'transform rotate-180' : ''"
+      :class="toogleAsideCompact ? 'transform rotate-180 duration-100' : ''"
       xmlns="http://www.w3.org/2000/svg"
       width="24px"
       height="24px"
