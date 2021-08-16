@@ -65,6 +65,7 @@ export default {
       { name: 'settings', type: 'single' },
     ],
     key: 'userJwt',
+    expires: '1d',
   },
   build: {
     babel: {

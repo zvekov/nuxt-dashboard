@@ -1,37 +1,43 @@
 <template>
   <div class="flex flex-col w-full md:max-w-md md:px-12">
     <div class="py-6 px-8 bg-white rounded-lg shadow-xs">
-      <h1>Signin</h1>
+      <h1 class="mb-4">Signin</h1>
+      <p class="opacity-50">Email: demo@demo.com</p>
+      <p class="opacity-50">Password: demo@demo.com</p>
       <div v-show="error !== ''" class="p-3 border">
         <p>{{ error }}</p>
       </div>
       <form @submit="loginUser">
         <div>
-          <input
-            v-model="identifier"
-            class="p-3 my-5 border w-full"
-            type="email"
-            placeholder="email"
+          <ui-input-float class="my-5"
+                          :text.sync="identifier"
+                          :label="'Your Email'"
+                          :type="'email'"
+                          :name="'email'"
+                          :placeholder="'Your Email'"
+                          :required="true"
           />
         </div>
         <div>
-          <input
-            v-model="password"
-            class="p-3 my-5 border w-full"
-            type="password"
-            placeholder="password"
+          <ui-input-float class="my-5"
+                          :text.sync="password"
+                          :label="'Password'"
+                          :name="'password'"
+                          :type="'password'"
+                          :placeholder="'Password'"
+                          :required="true"
           />
         </div>
-        <div>
+        <div class="mt-8 mb-5">
           <button
             :disabled="identifier === '' || password === ''"
-            class="button--green"
+            class="bg-green-800 text-gray-100 rounded-lg px-4 py-2"
             type="submit"
           >
             Login
           </button>
-          or
-          <nuxt-link to="/auth/signup">Sign Up</nuxt-link>
+          <span class="px-2">or</span>
+          <nuxt-link to="/auth/signup" class="lowercase">SignUp</nuxt-link>
         </div>
       </form>
     </div>
@@ -43,8 +49,8 @@ export default {
   layout: "auth",
   data() {
     return {
-      identifier: "demo@demo.com",
-      password: "demo@demo.com",
+      identifier: "",
+      password: "",
       error: ""
     };
   },

@@ -1,24 +1,33 @@
 <template>
   <div class="input-float" :class="required ? 'required' : 'not-required'">
     <input
-      :value="value"
+      :value="text" @input="onInput"
       :type="type"
       :required="required"
       :placeholder="placeholder"
+      :name="name"
     />
-    <label>{{ label }}</label>
+    <label :for="name">{{ label }}</label>
   </div>
 </template>
 
 <script>
 export default {
   name: "InputFloat",
+  model: {
+    prop: "text",
+    event: "update"
+  },
   props: {
     label: {
       type: String,
       default: null
     },
     value: {
+      type: String,
+      default: null
+    },
+    name: {
       type: String,
       default: null
     },
@@ -37,8 +46,14 @@ export default {
   },
   data() {
     return {
-      null: null
+      null: null,
+      model: this.value
     };
+  },
+  methods: {
+    onInput(event) {
+      this.$emit("update:text", event.target.value);
+    }
   }
 };
 </script>
@@ -55,6 +70,15 @@ export default {
     }
 
     &:focus ~ label {
+      @apply bg-white px-1 -ml-1 text-green-800;
+      top: -0.65rem;
+    }
+
+    &::placeholder {
+      @apply text-transparent;
+    }
+
+    &:not(:placeholder-shown) + label {
       @apply bg-white px-1 -ml-1 text-green-800;
       top: -0.65rem;
     }
